@@ -1,15 +1,26 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import LandingBlock from './components/LandingBlock';
-import Content from './components/Content';
+import{ 
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import Product from './components/Product';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar/>
-      <LandingBlock/>
-      <Content/>
-    </div>
+      <Switch>
+        <Route exact path="/product/:slug">
+          <Product/>
+        </Route>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
