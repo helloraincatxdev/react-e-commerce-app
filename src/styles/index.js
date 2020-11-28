@@ -5,3 +5,4 @@ export * from './styledContentLayout';
 export * from './styledItemAll';
 export * from './styledCard';
 export * from './styledImage';
+export * from './styledInputBox';

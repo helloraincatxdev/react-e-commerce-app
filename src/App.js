@@ -5,14 +5,18 @@ import{
   Switch,
   Route,
 } from 'react-router-dom';
-import Product from './components/Product';
-import Home from './components/Home';
+import Cart from './views/Cart'
+import Product from './views/Product';
+import Home from './views/Home';
 
 function App() {
   return (
     <Router>
       <Navbar/>
       <Switch>
+        <Route path="/cart">
+          <Cart />
+        </Route>
         <Route exact path="/product/:slug">
           <Product/>
         </Route>

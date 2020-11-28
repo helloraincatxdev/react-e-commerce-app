@@ -14,9 +14,11 @@ const initState = {
 }
 
 export default function itemReducer(state = initState, action) {
-    if(action.type === "ADD_ITEM") {
+    console.log(action)
+    if(action.type === 'ADD_ITEM_TOCART') {
         return {
-            inCart: [...state.inCart, action.item]
+            ...state,
+            inCart: [...state.inCart, action.payload],
         }
     }
     return state;

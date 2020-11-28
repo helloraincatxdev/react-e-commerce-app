@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { createSelector } from 'reselect';
-import AddToCart from './AddToCart';
+import AddToCart from '../components/AddToCart';
 
 // createSelector doesn't accept params, use factory fn() 
 const facFn = (payLoadId) => {

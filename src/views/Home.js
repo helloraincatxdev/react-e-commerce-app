@@ -1,6 +1,6 @@
 import React from 'react'
-import LandingBlock from './LandingBlock';
-import Content from './Content';
+import LandingBlock from '../components/LandingBlock';
+import Content from '../components/Content';
 
 export default function Home() {
     return (
