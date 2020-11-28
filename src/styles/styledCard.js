@@ -5,12 +5,23 @@ export const MainCardItem = style.div`
     width: 200px;
     height: 280px;
     overflow: hidden;
-    padding: 0 .3rem;
-
     &:hover {
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         cursor: pointer;
 
+    }
+
+    a {
+        text-decoration: none;
+        color: ${ props => props.theme.headerTextCol1 };
+
+        article {
+            padding: 0 .5rem;
+            div {
+                min-height: 36px;
+                max-height: 36px;
+            }
+        }
     }
     
     img {

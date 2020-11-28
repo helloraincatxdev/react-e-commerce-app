@@ -5,5 +5,5 @@ export const ItemAll = style.div`
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     grid-template-rows: auto;
-    gap: .5rem;
+    gap: 1rem .5rem;
 `

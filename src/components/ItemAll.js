@@ -5,7 +5,18 @@ import { Link } from 'react-router-dom';
 
 const ItemAll = ({ items }) => {
 
-    console.log(items)
+    //slice overflow text
+    const handleOverflowText = (text) => {
+        if(text.length > 40) {
+            let res = '';
+            for(let i = 0; i < 40; i++) {
+                res += text[i];
+            }
+            res += '...';
+            return res;
+        }
+        return text;
+    }
 
     return (
         <>
@@ -13,9 +24,11 @@ const ItemAll = ({ items }) => {
             { items.map(item => (
                 <S.MainCardItem key={ item.id }>
                     <Link to={ `/product/${item.title}id=${item.id}` }>
-                        <img src={ item.imgUrl } alt='hi'/>
+                        <img src={ item.imgUrl } alt={ item.title }/>
                         <article>
-                            <p>{ item.title }</p>
+                            <div>
+                                <p>{ handleOverflowText(item.title) }</p>
+                            </div>
                             <p>Rating: ⭐⭐⭐⭐⭐</p>
                             <small>Price: ฿<b>{ item.price }</b></small>
                         </article>

@@ -17,6 +17,7 @@ const Product = () => {
 
     // grab item's id located at last 4 chars of slug.
     let id = slug.slice(-4);
+    console.log(id)
 
     const item = useSelector(facFn(id));
 

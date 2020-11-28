@@ -22,6 +22,7 @@ export const InputWrap = style.div`
         font-size: 18px;
         border: 1px solid transparent;
         border-radius: 8px;
+        color: ${ props => props.theme.headerTextCol1 };
         box-shadow: 0px 0px 0px 1px #e7e7e9 inset;
         &:hover {
             border-color: rgba(0,0,0,0.1);
